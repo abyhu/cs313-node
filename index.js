@@ -18,8 +18,8 @@ app.get('/', (req, res) => res.render('pages/index'));
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 function calculate(request, response) {
-	const pounds = Number(request.query.pounds); 
-	const ounces = Number(request.query.ounces);
+	const pounds = request.query.pounds; 
+	const ounces = request.query.ounces;
 	const type = request.query.type;
 	
 	if(pounds == 0 
@@ -33,7 +33,7 @@ function calculate(request, response) {
 		type = "First Class Package Service";
 	}
 	
-	this.getPrice(response, pounds, ounces, type);
+	getPrice(response, pounds, ounces, type);
 }
 
 function getPrice(response, pounds, ounces, type) {

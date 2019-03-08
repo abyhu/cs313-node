@@ -1,0 +1,63 @@
+body {
+	font-family: font-family: 'Raleway', sans-serif; }
+
+.jumbotron {
+  	background: #232361;
+  	color: #5c80a2;
+  	padding-bottom: 30px;
+	margin: 0; 	}
+  
+.jumbotron .btn-secondary {
+    background: #5c80a2;
+    border-color: #2e5c87; 
+	color: #eeeeee }
+
+.jumbotron .btn-secondary:hover {
+    background: #2e5c87; 
+	color: #eeeeee; }
+
+.jumbotron .btn-primary, .submitButton {
+	font-size: 16px;
+    background: #AF1911;
+    border-color: #84120A;
+	color: #fefefe; 
+	border-radius: 10px; 
+	padding: 2% 3%;
+	margin: 0 0 8% 0;	}
+
+.jumbotron .btn-primary:hover, .submitButton:hover {
+    background: #84120A;
+	color: #eeeeee; }
+
+.jumbotron p {
+    color: #cccccc;
+    max-width: 75%;
+    margin: 1em auto 2em; }
+
+.navbar + .jumbotron {
+    margin-top: -20px; }
+
+.jumbotron .lang-logo img {
+      max-width: 20%; }
+
+h1, h2, h3, h4, h5 {
+	font-family: font-family: 'Open Sans', sans-serif; }
+
+.homebar {
+	background: #91342f; }
+
+.home {
+	background: #91130a; }
+
+select option:first-of-type {
+	display: none; }
+
+p {
+	margin: 4% 0; }
+
+label {
+	margin: 2% 0; }
+
+a {
+	color: #232361; }
+

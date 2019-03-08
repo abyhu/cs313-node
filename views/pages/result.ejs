@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="/redbowbox.png">
+    </a>
+    <h1>Gone Postal</h1>
+    <p>This is a simple shipping rate Node.JS application deployed to Heroku.
+		<br />It's a reasonably simple app - but a good way to practice new skills.</p>
+  </div>
+</div>
+<div class="container">
+  <hr>
+  <div id="parcelInformation" class="row">
+    <div class="col-md-6">
+      <h3>Information About Your Parcel</h3>
+		<form action="/calculateShipping" method="get">
+			<p>Please enter the weight of the item to be shipped.</p>
+			<label>Pounds: <input type="number" name="pounds"></label>
+			<label>Ounces: <input type="number" name="ounces"></label>
+			<p>Please select which type of item will be shipped.</p>
+			<select name="type">
+				<option selected>Select Mail Type</option>
+				<option name="stamped">Stamped Letters</option>
+				<option name="metered">Metered Letters</option>
+				<option name="flat">Large Flat Envelopes</option>
+				<option name="package">First Class Package Service</option>
+			</select>
+			<br><br>
+			<input type="submit" value="Calculate Shipping" class="submitButton">
+	  	</form>
+    </div>
+    <div id="priceEstimate" class="col-md-6">
+      <h3>Estimated Shipping Costs</h3>
+		<p>Due to the weight of your package: <br>
+			Pounds: <%= pounds %> <br>
+			Ounces: <%= ounces %> <br> 
+			it must ship using <%= type %>.</p>
+      	<p>It is estimated it will cost $<%= price %> to ship your package.</p>
+    </div>
+  </div> <!-- row -->
+  <footer class="alert alert-info text-center" role="alert">
+	  &copy; 2019 Abrial Marroquin | Template from the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Heroku/Express Framework</a> | Created for <a href="https://www.byui.edu">BYU Idaho Online Learning</a>
+  </footer>
+</div>
+</body>
+</html>

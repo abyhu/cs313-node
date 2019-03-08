@@ -33,7 +33,7 @@ function calculate(request, response) {
 		type = "First Class Package Service";
 	}
 	
-	getPrice(response, pounds, ounces, type);
+	this.getPrice(response, pounds, ounces, type);
 }
 
 function getPrice(response, pounds, ounces, type) {

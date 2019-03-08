@@ -6,6 +6,10 @@ body {
   	color: #5c80a2;
   	padding-bottom: 20px;
 	margin: 0; 	}
+
+.jumbotron h1 {
+	font-size: 40px;
+}
   
 .jumbotron .btn-secondary {
     background: #5c80a2;

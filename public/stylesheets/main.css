@@ -4,7 +4,7 @@ body {
 .jumbotron {
   	background: #232361;
   	color: #5c80a2;
-  	padding-bottom: 30px;
+  	padding-bottom: 20px;
 	margin: 0; 	}
   
 .jumbotron .btn-secondary {
@@ -38,7 +38,7 @@ body {
     margin-top: -20px; }
 
 .jumbotron .lang-logo img {
-      max-width: 15%; }
+      max-width: 18%; }
 
 h1, h2, h3, h4, h5 {
 	font-family: font-family: 'Open Sans', sans-serif; }

@@ -10,7 +10,7 @@ function getPrice(response, pounds, ounces, type) {
 			var meteredPrices = [0.00, 0.50, 0.65, 0.80, 0.95];
 			price = meteredPrices[ounces];
 			break;
-		case "Large Flat Envelope":
+		case "Large Flat Envelopes":
 			var flatPrices = [0.00, 1.00, 1.15, 1.30, 1.45, 1.60, 1.75, 1.90, 2.05, 2.20, 2.35, 2.50, 2.65, 2.80];
 			price = flatPrices[ounces];
 			break;
@@ -58,7 +58,7 @@ module.exports = {
 		{
 			if (pounds == 0 && ounces > 4 && ounces <= 13) 
 			{ 
-				type = "Large Flat Envelope"; 
+				type = "Large Flat Envelopes"; 
 			}
 		} else if (pounds != 0 || ounces > 13) 
 		{ 

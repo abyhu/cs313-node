@@ -50,7 +50,7 @@ module.exports = {
 		{
 			type = "Large Flat Envelope";
 		} 
-		if (pounds == 0 && ounces > 13) 
+		if (pounds != 0 || ounces > 13) 
 		{
 			type = "First Class Package Service";
 		}

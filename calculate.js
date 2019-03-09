@@ -41,11 +41,11 @@ module.exports = {
 		const ounces = request.query.ounces;
 		const type = request.query.type;
 
-		if(pounds == 0 && ounces > 4) 
+		if(pounds == 0 && ounces > 4 && ounces <= 13) 
 		{
 			type = "Large Flat Envelope";
 		} 
-		if (pounds != 0 || ounces > 13) 
+		if (pounds > 0 || ounces > 13) 
 		{
 			type = "First Class Package Service";
 		}

@@ -15,7 +15,6 @@ function getPrice(response, pounds, ounces, type) {
 					break;
 				default:
 					price = 1.00;
-					break;
 			}
 		case "Metered Letters":
 			switch (ounces) {
@@ -30,7 +29,6 @@ function getPrice(response, pounds, ounces, type) {
 					break;
 				default:
 					price = 0.95;	
-					break;
 			}
 		case "Large Flat Envelope":
 			switch (ounces) {
@@ -72,7 +70,6 @@ function getPrice(response, pounds, ounces, type) {
 					break;
 				default:
 					price = 2.80;
-					break;
 			}
 		default:
 			if (pounds == 0) {
@@ -97,7 +94,6 @@ function getPrice(response, pounds, ounces, type) {
 					break;		
 				default:
 					price = 5.71;
-					break;
 				}
 			} else {
 				switch (pounds) {
@@ -148,7 +144,6 @@ function getPrice(response, pounds, ounces, type) {
 					break;
 				default:
 					price = 18.30;	
-					break;
 				}
 			}
 		}

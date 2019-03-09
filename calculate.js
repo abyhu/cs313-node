@@ -54,7 +54,7 @@ module.exports = {
 		const ounces = request.query.ounces;
 		const type = request.query.type;
 
-		if(type == "Metered Letters" || type == "Stamped Letters") 
+		/*if(type == "Metered Letters" || type == "Stamped Letters") 
 		{
 			if (pounds == 0 && ounces > 4 && ounces <= 13) 
 			{ 
@@ -63,7 +63,7 @@ module.exports = {
 		} else if (pounds != 0 || ounces > 13) 
 		{ 
 			type = "First Class Package Service"; 
-		}
+		}*/
 
 		getPrice(response, pounds, ounces, type);
 	}

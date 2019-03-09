@@ -160,12 +160,11 @@ module.exports = {
 		const ounces = request.query.ounces;
 		const type = request.query.type;
 
-		if(pounds == 0 && ounces > 4 
-		   && (type == "Stamped Letters" || type == "Metered Letters")) 
+		if(pounds == 0 && ounces > 4) 
 		{
 			type = "Large Flat Envelope";
 		} 
-		if (pounds == 0 && ounces > 13 && type == "Large Flat Envelope") 
+		if (pounds == 0 && ounces > 13) 
 		{
 			type = "First Class Package Service";
 		}

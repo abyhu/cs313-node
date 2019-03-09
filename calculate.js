@@ -40,7 +40,6 @@ function getPrice(response, pounds, ounces, type) {
 				var poundParcelPrices = [5.71, 6.68, 7.85, 8.30, 8.75, 9.80, 10.55, 11.50, 11.85, 12.30, 13.10, 13.95, 15.20, 16.10, 17.10, 17.80, 18.30, 19.15,19.50, 20.05, 20.90, 21.60, 22.10, 22.60, 23.15, 23.35, 24.30, 25.05, 25.80, 26.60, 27.40, 28.20, 28.50, 29.00, 29.25, 29.55, 29.85, 30.15, 30.50, 30.80, 31.15];
 				price = poundParcelPrices[pounds];
 			}
-			break;
 		}
 
 		const params = {pounds: pounds, ounces: ounces, type: type, price: price};
@@ -55,7 +54,7 @@ module.exports = {
 		const ounces = request.query.ounces;
 		const type = request.query.type;
 
-		if(type = "Metered Letters" || type = "Stamped Letters") 
+		if(type == "Metered Letters" || type == "Stamped Letters") 
 		{
 			if (pounds == 0 && ounces > 4 && ounces <= 13) 
 			{ 

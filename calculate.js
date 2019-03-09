@@ -3,151 +3,33 @@ function getPrice(response, pounds, ounces, type) {
 
 	switch(type) {
 		case "Stamped Letters": 
-			switch(ounces) {
-				case 1:
-					price = 0.55; 
-					break;
-				case 2:
-					price = 0.70;
-					break;
-				case 3:
-					price = 0.85;
-					break;
-				default:
-					price = 1.00;
-			}
+			var stampedPrices = [0.00, 0.55, 0.70, 0.85, 1.00];
+			price = stampedPrices[ounces];
 			break;
 		case "Metered Letters":
-			switch (ounces) {
-				case 1:
-					price = 0.50; 
-					break;
-				case 2:
-					price = 0.65;
-					break;
-				case 3:
-					price = 0.80;
-					break;
-				default:
-					price = 0.95;	
-			}
+			var meteredPrices = [0.00, 0.50, 0.65, 0.80, 0.95];
+			price = meteredPrices[ounces];
 			break;
 		case "Large Flat Envelope":
-			switch (ounces) {
-				case 1:
-					price = 1.00; 
-					break;
-				case 2:
-					price = 1.15;
-					break;
-				case 3:
-					price = 1.30;
-					break;
-				case 4:
-					price = 1.45; 
-					break;
-				case 5:
-					price = 1.60;
-					break;
-				case 6:
-					price = 1.75;
-					break;
-				case 7:
-					price = 1.90; 
-					break;
-				case 8:
-					price = 2.05;
-					break;
-				case 9:
-					price = 2.20;
-					break;
-				case 10:
-					price = 2.35; 
-					break;
-				case 11:
-					price = 2.50;
-					break;
-				case 12:
-					price = 2.65;
-					break;
-				default:
-					price = 2.80;
-			}
+			var flatPrices = [0.00, 1.00, 1.15, 1.30, 1.45, 1.60, 1.75, 1.90, 2.05, 2.20, 2.35, 2.50, 2.65, 2.80];
+			price = flatPrices[ounces];
 			break;
 		default:
 			if (pounds == 0) {
-				switch (ounces) {
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-					price = 3.66; 
-					break;
-				case 5:
-				case 6:
-				case 7:
-				case 8:
-					price = 4.39;
-					break;
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-					price = 5.19;
-					break;		
-				default:
-					price = 5.71;
-				}
+				var zeroPoundParcelPrices = [0.00, 3.66, 4.39, 5.19, 5.71];
+				if (ounces == 0)
+					price= zeroPoundParcelPrices[0];
+				else if (ounces >= 1 && ounces < 5)
+					price = zeroPoundParcelPrices[1];
+				else if (ounces >=5 && ounces < 9 )
+					price = zeroPoundParcelPrices[2];
+				else if (ounces >= 9 && ounces < 13)
+					price = zeroPoundParcelPrices[3];
+				else 
+					price = zeroPoundParcelPrices[4];
 			} else {
-				switch (pounds) {
-				case 1:
-					price = 6.68; 
-					break;
-				case 2:
-					price = 7.85;
-					break;
-				case 3:
-					price = 8.30;
-					break;
-				case 4:
-					price = 8.75; 
-					break;
-				case 5:
-					price = 9.80;
-					break;
-				case 6:
-					price = 10.55;
-					break;
-				case 7:
-					price = 11.50; 
-					break;
-				case 8:
-					price = 11.85;
-					break;
-				case 9:
-					price = 12.30;
-					break;
-				case 10:
-					price = 13.10; 
-					break;
-				case 11:
-					price = 13.95;
-					break;
-				case 12:
-					price = 15.20;
-					break;
-				case 13:
-					price = 16.10;
-					break;
-				case 14:
-					price = 17.10;
-					break;
-				case 15:
-					price = 17.80;
-					break;
-				default:
-					price = 18.30;	
-				}
+				var poundParcelPrices = [5.71, 6.68, 7.85, 8.30, 8.75, 9.80, 10.55, 11.50, 11.85, 12.30, 13.10, 13.95, 15.20, 16.10, 17.10, 17.80, 18.30, 19.15,19.50, 20.05, 20.90, 21.60, 22.10, 22.60, 23.15, 23.35, 24.30, 25.05, 25.80, 26.60, 27.40, 28.20, 28.50, 29.00, 29.25, 29.55, 29.85, 30.15, 30.50, 30.80, 31.15];
+				price = [pounds];
 			}
 			break;
 		}
